@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+    php:
+        build: ./docker/php-fpm
+        container_name: devit_php
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./:/var/www/html
