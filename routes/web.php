@@ -17,7 +17,9 @@ Route::get('/', function () {
 
 Route::get('/employees', 'EmployeeController@index')->name('employees');
 Route::get('/employee/{id}', 'EmployeeController@details')->name('employeeDetails');
-Route::get('/leaveRequests', 'EmployeeController@leaveRequests')->name('leaveRequests');
-Route::get('/employeeLeaveRequests/{id}', 'EmployeeController@employeeLeaveRequests')->name('employeeLeaveRequests');
-Route::get('/timeLogs', 'EmployeeController@timeLogs')->name('timeLogs');
-Route::get('/employeeTimeLogs/{id}', 'EmployeeController@employeeTimeLogs')->name('employeeTimeLogs');
+
+Route::get('/leaveRequests', 'LeaveRequestsController@leaveRequests')->name('leaveRequests');
+Route::get('/employeeLeaveRequests/{id}', 'LeaveRequestsController@employeeLeaveRequests')->name('employeeLeaveRequests');
+
+Route::get('/timeLogs', 'TimeLogsController@timeLogs')->name('timeLogs');
+Route::get('/employeeTimeLogs/{id}', 'TimeLogsController@employeeTimeLogs')->name('employeeTimeLogs');

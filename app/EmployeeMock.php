@@ -4,11 +4,13 @@ namespace App;
 
 use Exception;
 use App\Interfaces\EmployeeInterface;
+use App\Interfaces\LeaveRequestInterface;
+use App\Interfaces\TimeLogsInterface;
 
 /**
  * This class serves the purpose of mocking the database for Employee Records
  */
-class EmployeeMock implements EmployeeInterface
+class EmployeeMock implements EmployeeInterface, LeaveRequestInterface, TimeLogsInterface
 {
     /**
      * Returns all employee records
