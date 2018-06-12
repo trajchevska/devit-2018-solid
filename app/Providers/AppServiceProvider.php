@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Interfaces\EmployeeInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
     }
 
     /**
@@ -23,6 +24,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('App\Interfaces\EmployeeInterface', function($app)
+        {
+            return new \App\EmployeeMock();
+        });
+
+        $this->app->bind('App\Interfaces\TimeLogsInterface', function($app)
+        {
+            return new \App\EmployeeMock();
+        });
+
+        $this->app->bind('App\Interfaces\LeaveRequestInterface', function($app)
+        {
+            return new \App\EmployeeMock();
+        });
     }
 }
