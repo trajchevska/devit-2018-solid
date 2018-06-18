@@ -7,5 +7,5 @@ This is a sample project for the purpose of the SOLID workhsop at the DEVit Conf
 4. Run `php artisan serve` to start a local server. You can specify a port if needed with `php artisan serve PORT`.  
 
 ## Running with docker
-1. docker-compose up
-2. docker exec -it devit_php bash -c "./project_boot.sh"
+1. From the root of the project run `docker-compose up`
+2. Then, run `docker exec -it devit_php bash -c "./project_boot.sh"`
